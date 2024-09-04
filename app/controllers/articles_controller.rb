@@ -1,9 +1,13 @@
 class ArticlesController < ApplicationController
-  	before_action :set_article, only: [:update, :destroy]
+  	before_action :set_article, only: [:update, :destroy, :show]
 
 	def index
 		@articles = Article.all
 		render json: @articles
+	end
+
+	def show
+		render json: @article
 	end
 
   	def create
