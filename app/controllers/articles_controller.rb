@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  	before_action :set_article, only: [:update]
+  	before_action :set_article, only: [:update, :destroy]
 
 	def index
 		@articles = Article.all
@@ -22,6 +22,11 @@ class ArticlesController < ApplicationController
   		else
   			render @article.errors
   		end
+  	end
+
+  	def destroy
+  		@article.destroy
+  		render json: { message: 'removed' }, status: :ok
   	end
 
   	private
