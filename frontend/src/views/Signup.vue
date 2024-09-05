@@ -4,7 +4,15 @@ let password = ''
 let passwordError = ''
 
 const handleSubmit = () => {
-	passwordError = password.length > 5 ? '' : 'Password must be at least 5 chars long'
+	// passwordError = password.length > 5 ? '' : 'Password must be at least 5 chars long'
+	console.log("a")
+	const register = async () => {
+    await fetch(`http://localhost:3000/signup?email=${email}&password=${password}`)
+        .then(res => res.json())
+        .then(data => localStorage.setItem("csrf", data['csrf']))
+        .catch(err => console.log(err.message))
+	}
+	register()
 }
 </script>
 
