@@ -10,7 +10,6 @@
 
 <template>
 	<div class="Post text-center container mx-auto">
-		<p>Post</p>
 		<div v-if="!post">
 			Pas de post
 		</div>
