@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :articles
   get 'article-creation' => 'articles#create'
+  get 'article-deletion' => 'articles#destroy'
   get 'signup' => 'signup#create'
 end

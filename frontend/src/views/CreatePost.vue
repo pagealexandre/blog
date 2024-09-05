@@ -1,19 +1,24 @@
 <script setup>
+import { useRouter } from 'vue-router'
+
 let title = ''
 let body = ''
+const router = useRouter()
 
 const handleSubmit = () => {
 	// passwordError = password.length > 5 ? '' : 'Password must be at least 5 chars long'
 	const createPost = async () => {
     await fetch(`http://localhost:3000/article-creation?title=${title}&body=${body}`)
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => router.push('/'))
         .catch(err => console.log(err.message))
 	}
 	createPost()
     title = ''
     body = ''
-}	
+
+
+}
 
 </script>
 
