@@ -22,7 +22,7 @@ getAllPosts()
 			</div>
 
 			<div v-else>
-				<div class="PostItem border border-slate-700 mb-4 p-4 rounded-lg cursor-pointer" 
+				<div class="PostItem border border-slate-300 mb-4 p-4 rounded-lg cursor-pointer" 
 				v-for="item, itemIndex in store.posts" :key="itemIndex" 
 				@click="$router.push(`/post/${item.id}`)">
 				<h1 class="text-slate-900 text-3xl font-bold">{{ item.title }}</h1>
