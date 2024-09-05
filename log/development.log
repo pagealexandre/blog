@@ -492,3 +492,650 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 16254)
 
 
+Started GET "/articles/1?title=my_title&body=my_body" for 127.0.0.1 at 2024-09-05 13:09:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as */*
+  Parameters: {"title"=>"my_title", "body"=>"my_body", "id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38:in `set_article'
+Completed 404 Not Found in 9ms (ActiveRecord: 1.3ms | Allocations: 8768)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Article with 'id'=1):
+  
+app/controllers/articles_controller.rb:38:in `set_article'
+Started GET "/articles?title=my_title&body=my_body" for 127.0.0.1 at 2024-09-05 13:09:19 +0200
+Processing by ArticlesController#index as */*
+  Parameters: {"title"=>"my_title", "body"=>"my_body"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 8500)
+
+
+Started GET "/articles?title=my_title&body=my_body" for 127.0.0.1 at 2024-09-05 13:09:20 +0200
+Processing by ArticlesController#index as */*
+  Parameters: {"title"=>"my_title", "body"=>"my_body"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 963)
+
+
+Started GET "/articles?title=my_title&body=my_body" for 127.0.0.1 at 2024-09-05 13:09:38 +0200
+Processing by ArticlesController#index as */*
+  Parameters: {"title"=>"my_title", "body"=>"my_body"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 861)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-09-05 13:09:55 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 861)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-09-05 13:10:20 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 4848)
+
+
+Started GET "/articles" for 127.0.0.1 at 2024-09-05 13:10:32 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 4916)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2024-09-05 13:10:35 +0200
+Processing by ArticlesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38:in `set_article'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 895)
+
+
+Started GET "/posts/" for ::1 at 2024-09-05 13:31:43 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/posts/" for ::1 at 2024-09-05 13:31:44 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  
+Started GET "/articles/" for ::1 at 2024-09-05 13:32:03 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (2.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 3.1ms | Allocations: 1118)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 13:32:05 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 13:32:07 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 13:32:15 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 13:41:48 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (2.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.0ms | Allocations: 1119)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 13:41:51 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:44:07 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:44:10 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:44:10 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:45:14 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:57:26 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:57:27 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:57:53 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:57:54 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:57:55 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:58:37 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:58:39 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:58:40 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 13:59:57 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:00:03 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:01:09 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:01:13 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:01:41 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:01:43 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:02:03 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:02:05 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:09:21 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:09:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:09:48 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:09:48 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:11:35 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:11:36 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:12:26 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:12:27 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:12:30 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:12:31 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:01 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:02 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:02 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:03 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:04 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:13:05 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started GET "/articles/" for ::1 at 2024-09-05 14:13:51 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 18ms (Views: 4.1ms | ActiveRecord: 2.2ms | Allocations: 15710)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:13:54 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 955)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:13:55 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 865)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:13:56 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 861)
+
+
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:14:04 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started OPTIONS "/articles/" for ::1 at 2024-09-05 14:14:05 +0200
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/articles"):
+  
+Started GET "/articles/" for ::1 at 2024-09-05 14:14:15 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:14:17 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:14:37 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 861)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:15:39 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:15:56 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:15:58 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:11 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:12 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:25 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:27 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:29 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:47 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 850)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:48 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:16:49 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:17:39 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:17:39 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 850)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:17:49 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:17:50 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:18:18 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 850)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:18:51 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:18:52 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:04 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:05 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:06 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:06 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:06 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:19:15 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:02 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:03 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:03 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:04 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:04 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:20 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:23 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:24 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:24 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:31 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:31 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:43 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:50 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:51 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:51 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:20:57 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:15 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:18 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:27 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:30 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:30 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:33 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
+Started GET "/articles/" for ::1 at 2024-09-05 14:21:35 +0200
+Processing by ArticlesController#index as */*
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:6:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 849)
+
+
