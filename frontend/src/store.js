@@ -2,7 +2,8 @@ import { reactive } from 'vue'
 
 const store = reactive({
 	posts: [],
-	editPost: {}
+	editPost: {},
+	showPost: {}
 })
 
 export default store;

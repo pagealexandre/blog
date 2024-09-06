@@ -9,6 +9,6 @@ import { RouterLink } from 'vue-router'
 				</h1>
 				<p class="text-xl text-slate-500">A blog with post on what I like</p>
 				<RouterLink to="/signup">Signup </RouterLink>
-				<RouterLink to="/signin"> Signin</RouterLink>
+				<RouterLink to="/signin">Signin </RouterLink>
 			</header>
 </template>

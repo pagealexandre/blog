@@ -3,10 +3,10 @@ import { useRouter } from 'vue-router'
 
 let title = ''
 let body = ''
+let image 
 const router = useRouter()
 
 const handleSubmit = () => {
-	// passwordError = password.length > 5 ? '' : 'Password must be at least 5 chars long'
 	const createPost = async () => {
     await fetch(`http://localhost:3000/article-creation?title=${title}&body=${body}`)
         .then(res => res.json())
@@ -14,10 +14,6 @@ const handleSubmit = () => {
         .catch(err => console.log(err.message))
 	}
 	createPost()
-    title = ''
-    body = ''
-
-
 }
 
 </script>
@@ -34,8 +30,12 @@ const handleSubmit = () => {
 					<label>Body:</label>
 					<textarea cols="40" rows="5" required v-model="body"></textarea>
 
+					<label> Image:</label>
+				    <input name="image" type="file" @change="onFileChanged($event)" accept="image/*" capture data-direct-upload-url="/rails/active_storage/direct_uploads"
+        			direct_upload="true" />
+
 					<div class="submit">
-						<button>Create an account</button>
+						<button>Create a post</button>
 					</div>
 				</form>
 			</main>
@@ -56,18 +56,6 @@ const handleSubmit = () => {
     text-align: center;
 }
 
-	.pill {
-    display: inline-block;
-    margin: 20px 10px 0 0;
-    padding: 6px 12px;
-    background: #eee;
-    border-radius: 20px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: #777;
-    cursor: pointer;
-  }
 	
 	form {
 		width: 420px;
