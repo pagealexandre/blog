@@ -2,8 +2,8 @@
 import { useRouter } from 'vue-router'
 import store from '../store.js'
 
-let email = 'alexandre.page2@gmail.com'
-let password = 'hellomotoqdkljhezj'
+let email = ''
+let password = ''
 
 const router = useRouter()
 const handleSubmit = () => {
