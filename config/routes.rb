@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :articles
-  get 'signup' => 'signup#create'
+  post 'signup' => 'signup#create'
+  post 'signin' => 'signin#create'
 end

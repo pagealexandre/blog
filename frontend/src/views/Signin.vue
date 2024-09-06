@@ -1,15 +1,14 @@
 <script setup>
 import { useRouter } from 'vue-router'
+import store from '../store.js'
 
-let email = ''
-let password = ''
-let passwordError = ''
+let email = 'alexandre.page2@gmail.com'
+let password = 'hellomotoqdkljhezj'
 
 const router = useRouter()
 const handleSubmit = () => {
-	// passwordError = password.length > 5 ? '' : 'Password must be at least 5 chars long'
 	const register = async () => {
-    await fetch('http://localhost:3000/signup', {
+    await fetch('http://localhost:3000/signin', {
 	    headers: {
 	      'Accept': 'application/json',
 	      'Content-Type': 'application/json'
@@ -17,10 +16,16 @@ const handleSubmit = () => {
 	    method: "POST",
 	    body: JSON.stringify({email: email, password: password})
 	})
+		.catch(err => console.log(err.message))
         .then(res => res.json())
-        .then(data => localStorage.setItem("access", data['access']))
-        .then(data => router.push('/'))
-        .catch(err => console.log(err.message))
+        .then(data => {
+        	if (data['access']) {
+    			localStorage.setItem("access", data['access'])
+    			router.push('/')
+        	} else {
+        		store.passwordError = 'There is a password error'
+        	}
+    	})
 	}
 	register()
 }
@@ -34,10 +39,12 @@ const handleSubmit = () => {
 
 			<label>Password:</label>
 			<input type="password" required v-model="password">
-			<div v-if="passwordError" class="error">{{ passwordError }}</div>
+			<div v-if="store.passwordError" class="error">
+				<span>{{ store.passwordError }}</span>
+			</div>
 
 			<div class="submit">
-				<button>Create an account</button>
+				<button>Sign in</button>
 			</div>
 		</form>		
 	</div>
@@ -63,20 +70,6 @@ const handleSubmit = () => {
 .submit {
     text-align: center;
 }
-
-	.pill {
-    display: inline-block;
-    margin: 20px 10px 0 0;
-    padding: 6px 12px;
-    background: #eee;
-    border-radius: 20px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: #777;
-    cursor: pointer;
-  }
-	
 	form {
 		width: 420px;
 		margin: 30px auto;

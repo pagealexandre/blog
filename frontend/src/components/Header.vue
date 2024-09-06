@@ -1,5 +1,15 @@
-<script>
+<script setup>
 import { RouterLink } from 'vue-router'
+import { useRouter } from 'vue-router'
+import store from '../store.js'
+
+const router = useRouter()
+
+const Logout = () => {
+	localStorage.removeItem('access')
+	document.getElementById('logout').remove()
+	window.location.reload();
+}
 
 </script>
 <template>
@@ -8,7 +18,8 @@ import { RouterLink } from 'vue-router'
 				Alex's blog
 				</h1>
 				<p class="text-xl text-slate-500">A blog with post on what I like</p>
-				<RouterLink to="/signup">Signup </RouterLink>
-				<RouterLink to="/signin">Signin </RouterLink>
+					<RouterLink to="/signup">Signup </RouterLink>
+					<RouterLink to="/signin">Signin </RouterLink>
+					<div id="logout" v-if="store.isAuth()" @click="Logout">Logout</div>
 			</header>
 </template>

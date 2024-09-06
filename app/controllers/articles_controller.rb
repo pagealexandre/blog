@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	# before_action :authorize_access_request!, only: [:create, :update]
+	before_action :authorize_access_request!, only: [:create, :update, :destroy]
   	before_action :set_article, only: [:update, :destroy, :show]
 
 	def index

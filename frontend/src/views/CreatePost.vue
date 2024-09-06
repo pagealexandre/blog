@@ -11,16 +11,18 @@ const handleSubmit = () => {
     await fetch(`http://localhost:3000/articles`, {
 	    headers: {
 	      'Accept': 'application/json',
-	      'Content-Type': 'application/json'
+	      'Content-Type': 'application/json',
+	      'Authorization': localStorage.getItem('access') 
 	    },
 	    method: "POST",
 	    body: JSON.stringify({title: title, body: body})
 	})
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => router.push('/'))
         .catch(err => console.log(err.message))
 	}
 	createPost()
+	console.log(localStorage.getItem('access'))
 }
 
 </script>

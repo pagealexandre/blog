@@ -17,7 +17,8 @@ const handleSubmit = async () => {
     await fetch(`http://localhost:3000/articles/${route.params.id}`, {
 	    headers: {
 	      'Accept': 'application/json',
-	      'Content-Type': 'application/json'
+	      'Content-Type': 'application/json',
+	      'Authorization': localStorage.getItem('access')
 	    },
 	    method: "PUT",
 	    body: JSON.stringify({title: store.editPost.title, body: store.editPost.body})
