@@ -8,8 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :articles
-  get 'article-creation' => 'articles#create'
-  get 'article-deletion' => 'articles#destroy'
-  get 'article-update' => 'articles#update'
   get 'signup' => 'signup#create'
 end

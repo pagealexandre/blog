@@ -14,7 +14,14 @@ const getPost = async () => {
 }
 
 const handleSubmit = async () => {
-    await fetch(`http://localhost:3000/article-update?id=${route.params.id}&title=${store.editPost.title}&body=${store.editPost.body}`)
+    await fetch(`http://localhost:3000/articles/${route.params.id}`, {
+	    headers: {
+	      'Accept': 'application/json',
+	      'Content-Type': 'application/json'
+	    },
+	    method: "PUT",
+	    body: JSON.stringify({title: store.editPost.title, body: store.editPost.body})
+	})
     router.push('/')
 }
 

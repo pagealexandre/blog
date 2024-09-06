@@ -14,7 +14,7 @@ const getAllPosts = async () => {
 
 const deletePost = async (post) => {
 	store.posts = store.posts.filter(t => t !== post)
-	fetch('http://localhost:3000/article-deletion?id=' + post.id)
+	fetch('http://localhost:3000/articles/' + post.id, { method: "DELETE" })
 }
 
 const redirectEdit = (post) => {
