@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   	before_action :set_article, only: [:update, :destroy, :show]
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.order("created_at DESC")
 		render json: @articles
 	end
 

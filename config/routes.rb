@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :articles
   get 'article-creation' => 'articles#create'
   get 'article-deletion' => 'articles#destroy'
+  get 'article-update' => 'articles#update'
   get 'signup' => 'signup#create'
 end
