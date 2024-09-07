@@ -18,8 +18,8 @@ const Logout = () => {
 				Alex's blog
 				</h1>
 				<p class="text-xl text-slate-500">A blog with post on what I like</p>
-					<RouterLink to="/signup">Signup </RouterLink>
-					<RouterLink to="/signin">Signin </RouterLink>
+					<RouterLink v-if="!store.isAuth()" to="/signup">Signup </RouterLink>
+					<RouterLink v-if="!store.isAuth()" to="/signin">Signin </RouterLink>
 					<div id="logout" v-if="store.isAuth()" @click="Logout">Logout</div>
 			</header>
 </template>
