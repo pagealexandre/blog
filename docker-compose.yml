@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      - POSTGRES_DB=blog_development
+      - POSTGRES_USER=alex
+      - POSTGRES_PASSWORD=alex
+    ports:
+      - "5432:5432"
+
+  frontend:
+    build: frontend/
+    ports:
+      - "2600:2600"

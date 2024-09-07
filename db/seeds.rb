@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Article.create(title: "Should you create an app with Vue.js?", body: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+								 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+						 		 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+Article.create(title: "Do you love cat ?", body: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+								 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+						 		 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+Article.create(title: "Which tech is more trendy at the moment?", body: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+								 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+						 		 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")
+Article.create(title: "How to be more efficient in your day to day?", body: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+								 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+						 		 lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum")

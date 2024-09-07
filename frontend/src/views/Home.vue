@@ -37,7 +37,7 @@ getAllPosts()
 				There is no posts
 			</div>
 
-			<div v-else>
+			<div class="grid grid-cols-2 gap-4" v-else>
 				<div class="PostItem border border-slate-300 mb-4 p-4 rounded-lg cursor-pointer" 
 				v-for="item, itemIndex in store.posts" :key="itemIndex" >
 				<h1 @click="$router.push(`/post/${item.id}`)" class="text-slate-900 text-3xl font-bold">{{ item.title }}</h1>
