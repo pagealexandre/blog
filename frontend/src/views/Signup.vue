@@ -18,8 +18,12 @@ const handleSubmit = () => {
 	    body: JSON.stringify({email: email, password: password})
 	})
         .then(res => res.json())
-        .then(data => localStorage.setItem("access", data['access']))
-        .then(data => router.push('/'))
+        .then(data => {
+        	localStorage.setItem("access", data['access'])
+        	localStorage.setItem("user", data['user'])
+        	router.push('/')
+        	console.log(data)
+        })
         .catch(err => console.log(err.message))
 	}
 	register()

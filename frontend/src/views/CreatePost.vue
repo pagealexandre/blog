@@ -5,6 +5,7 @@ let title = ''
 let body = ''
 let image 
 const router = useRouter()
+const user = JSON.parse(localStorage.getItem('user'))
 
 const handleSubmit = () => {
 	const createPost = async () => {
@@ -15,7 +16,7 @@ const handleSubmit = () => {
 	      'Authorization': localStorage.getItem('access') 
 	    },
 	    method: "POST",
-	    body: JSON.stringify({title: title, body: body})
+	    body: JSON.stringify({title: title, body: body, user_id: user.id })
 	})
         .then(res => res.json())
         .then(data => router.push('/'))

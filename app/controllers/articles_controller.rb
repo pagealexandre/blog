@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 	end
 
   	def create
+  		byebug
     	@article = Article.build(article_params)
 
     	if @article.save
