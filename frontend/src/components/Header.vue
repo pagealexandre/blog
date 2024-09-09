@@ -7,6 +7,7 @@ const router = useRouter()
 
 const Logout = () => {
 	localStorage.removeItem('access')
+	localStorage.removeItem('user')
 	document.getElementById('logout').remove()
 	window.location.reload();
 }
