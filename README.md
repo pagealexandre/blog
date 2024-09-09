@@ -79,7 +79,8 @@ rails s
 
 ## Remarques
 
-Les fonctionnalités api et bouton sur le front ne sont fonctionnel que si l'utilisateur est loggé, pour cela il suffit de s'enregistrer.
+- Les fonctionnalités api et bouton sur le front (EDIT + DELETE) ne sont fonctionnelles que si l'utilisateur est loggé, pour cela il suffit de s'enregistrer ou de se login.
+- Lors de l'inscription ou du login si celuis-ci est fonctionnel on est redirigé vers la racine "/", il faut refresh la page pour voir le bouton de logout apparaitre. (Problème avec les variables reactives)
 
 
 
